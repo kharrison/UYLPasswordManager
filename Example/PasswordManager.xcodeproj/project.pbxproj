@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		538D004C13913F860002F60A /* PasswordManagerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D003E13913F860002F60A /* PasswordManagerAppDelegate.m */; };
+		538D004D13913F860002F60A /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004013913F860002F60A /* PasswordManagerViewController.m */; };
+		538D004E13913F860002F60A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004113913F860002F60A /* main.m */; };
+		538D004F13913F860002F60A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538D004413913F860002F60A /* InfoPlist.strings */; };
+		538D005013913F860002F60A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538D004613913F860002F60A /* MainWindow.xib */; };
+		538D005313913F860002F60A /* PasswordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538D004A13913F860002F60A /* PasswordManagerViewController.xib */; };
+		538D005C1391409C0002F60A /* PasswordManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D00581391409C0002F60A /* PasswordManagerTests.m */; };
+		538D005D1391409C0002F60A /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D005A1391409C0002F60A /* UYLPasswordManager.m */; };
+		538D005E1391409C0002F60A /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D005A1391409C0002F60A /* UYLPasswordManager.m */; };
+		538D006813914C900002F60A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405FF138AF2140007C7A4 /* Security.framework */; };
+		53A405B7138AE9370007C7A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405B6138AE9370007C7A4 /* UIKit.framework */; };
+		53A405B9138AE9370007C7A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405B8138AE9370007C7A4 /* Foundation.framework */; };
+		53A405BB138AE9370007C7A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405BA138AE9370007C7A4 /* CoreGraphics.framework */; };
+		53A405D7138AE9370007C7A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405B6138AE9370007C7A4 /* UIKit.framework */; };
+		53A405D8138AE9370007C7A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405B8138AE9370007C7A4 /* Foundation.framework */; };
+		53A405D9138AE9370007C7A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405BA138AE9370007C7A4 /* CoreGraphics.framework */; };
+		53A40600138AF2140007C7A4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405FF138AF2140007C7A4 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53A405DA138AE9370007C7A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53A405A9138AE9360007C7A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53A405B1138AE9370007C7A4;
+			remoteInfo = PasswordManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		538D003D13913F860002F60A /* PasswordManagerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerAppDelegate.h; sourceTree = "<group>"; };
+		538D003E13913F860002F60A /* PasswordManagerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerAppDelegate.m; sourceTree = "<group>"; };
+		538D003F13913F860002F60A /* PasswordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerViewController.h; sourceTree = "<group>"; };
+		538D004013913F860002F60A /* PasswordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerViewController.m; sourceTree = "<group>"; };
+		538D004113913F860002F60A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		538D004213913F860002F60A /* PasswordManager-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PasswordManager-Prefix.pch"; sourceTree = "<group>"; };
+		538D004513913F860002F60A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		538D004713913F860002F60A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		538D004913913F860002F60A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		538D004A13913F860002F60A /* PasswordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordManagerViewController.xib; sourceTree = "<group>"; };
+		538D004B13913F860002F60A /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		538D00571391409C0002F60A /* PasswordManagerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerTests.h; sourceTree = "<group>"; };
+		538D00581391409C0002F60A /* PasswordManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerTests.m; sourceTree = "<group>"; };
+		538D00591391409C0002F60A /* UYLPasswordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UYLPasswordManager.h; path = ../Classes/UYLPasswordManager.h; sourceTree = "<group>"; };
+		538D005A1391409C0002F60A /* UYLPasswordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UYLPasswordManager.m; path = ../Classes/UYLPasswordManager.m; sourceTree = "<group>"; };
+		538D005F139147240002F60A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		538D006A13914F400002F60A /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
+		53A405B2138AE9370007C7A4 /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A405B6138AE9370007C7A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		53A405B8138AE9370007C7A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		53A405BA138AE9370007C7A4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		53A405D6138AE9370007C7A4 /* PasswordManagerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A405FF138AF2140007C7A4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53A405AF138AE9370007C7A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A40600138AF2140007C7A4 /* Security.framework in Frameworks */,
+				53A405B7138AE9370007C7A4 /* UIKit.framework in Frameworks */,
+				53A405B9138AE9370007C7A4 /* Foundation.framework in Frameworks */,
+				53A405BB138AE9370007C7A4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A405D2138AE9370007C7A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A405D7138AE9370007C7A4 /* UIKit.framework in Frameworks */,
+				53A405D8138AE9370007C7A4 /* Foundation.framework in Frameworks */,
+				53A405D9138AE9370007C7A4 /* CoreGraphics.framework in Frameworks */,
+				538D006813914C900002F60A /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		538D001E13913F2B0002F60A /* ExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				538D003C13913F860002F60A /* Classes */,
+				538D004113913F860002F60A /* main.m */,
+				538D004213913F860002F60A /* PasswordManager-Prefix.pch */,
+				538D004313913F860002F60A /* Resources */,
+			);
+			name = ExampleApp;
+			sourceTree = "<group>";
+		};
+		538D003C13913F860002F60A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				538D003D13913F860002F60A /* PasswordManagerAppDelegate.h */,
+				538D003E13913F860002F60A /* PasswordManagerAppDelegate.m */,
+				538D003F13913F860002F60A /* PasswordManagerViewController.h */,
+				538D004013913F860002F60A /* PasswordManagerViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		538D004313913F860002F60A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				538D004413913F860002F60A /* InfoPlist.strings */,
+				538D004613913F860002F60A /* MainWindow.xib */,
+				538D004913913F860002F60A /* Info.plist */,
+				538D004A13913F860002F60A /* PasswordManagerViewController.xib */,
+				538D004B13913F860002F60A /* Tests-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		538D00551391407C0002F60A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				538D00561391409C0002F60A /* UnitTests */,
+				538D00591391409C0002F60A /* UYLPasswordManager.h */,
+				538D005A1391409C0002F60A /* UYLPasswordManager.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		538D00561391409C0002F60A /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				538D00571391409C0002F60A /* PasswordManagerTests.h */,
+				538D00581391409C0002F60A /* PasswordManagerTests.m */,
+			);
+			name = UnitTests;
+			path = ../Classes/UnitTests;
+			sourceTree = "<group>";
+		};
+		53A405A7138AE9360007C7A4 = {
+			isa = PBXGroup;
+			children = (
+				538D006A13914F400002F60A /* README.markdown */,
+				538D005F139147240002F60A /* LICENSE */,
+				538D00551391407C0002F60A /* Classes */,
+				538D001E13913F2B0002F60A /* ExampleApp */,
+				53A405B5138AE9370007C7A4 /* Frameworks */,
+				53A405B3138AE9370007C7A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53A405B3138AE9370007C7A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53A405B2138AE9370007C7A4 /* PasswordManager.app */,
+				53A405D6138AE9370007C7A4 /* PasswordManagerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53A405B5138AE9370007C7A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53A405FF138AF2140007C7A4 /* Security.framework */,
+				53A405B6138AE9370007C7A4 /* UIKit.framework */,
+				53A405B8138AE9370007C7A4 /* Foundation.framework */,
+				53A405BA138AE9370007C7A4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53A405B1138AE9370007C7A4 /* PasswordManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53A405E9138AE9370007C7A4 /* Build configuration list for PBXNativeTarget "PasswordManager" */;
+			buildPhases = (
+				53A405AE138AE9370007C7A4 /* Sources */,
+				53A405AF138AE9370007C7A4 /* Frameworks */,
+				53A405B0138AE9370007C7A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PasswordManager;
+			productName = PasswordManager;
+			productReference = 53A405B2138AE9370007C7A4 /* PasswordManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53A405D5138AE9370007C7A4 /* PasswordManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53A405EC138AE9370007C7A4 /* Build configuration list for PBXNativeTarget "PasswordManagerTests" */;
+			buildPhases = (
+				53A405D1138AE9370007C7A4 /* Sources */,
+				53A405D2138AE9370007C7A4 /* Frameworks */,
+				53A405D3138AE9370007C7A4 /* Resources */,
+				53A405D4138AE9370007C7A4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53A405DB138AE9370007C7A4 /* PBXTargetDependency */,
+			);
+			name = PasswordManagerTests;
+			productName = PasswordManagerTests;
+			productReference = 53A405D6138AE9370007C7A4 /* PasswordManagerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53A405A9138AE9360007C7A4 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 53A405AC138AE9360007C7A4 /* Build configuration list for PBXProject "PasswordManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 53A405A7138AE9360007C7A4;
+			productRefGroup = 53A405B3138AE9370007C7A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53A405B1138AE9370007C7A4 /* PasswordManager */,
+				53A405D5138AE9370007C7A4 /* PasswordManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53A405B0138AE9370007C7A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538D004F13913F860002F60A /* InfoPlist.strings in Resources */,
+				538D005013913F860002F60A /* MainWindow.xib in Resources */,
+				538D005313913F860002F60A /* PasswordManagerViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A405D3138AE9370007C7A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53A405D4138AE9370007C7A4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53A405AE138AE9370007C7A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538D004C13913F860002F60A /* PasswordManagerAppDelegate.m in Sources */,
+				538D004D13913F860002F60A /* PasswordManagerViewController.m in Sources */,
+				538D004E13913F860002F60A /* main.m in Sources */,
+				538D005D1391409C0002F60A /* UYLPasswordManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A405D1138AE9370007C7A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538D005C1391409C0002F60A /* PasswordManagerTests.m in Sources */,
+				538D005E1391409C0002F60A /* UYLPasswordManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53A405DB138AE9370007C7A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53A405B1138AE9370007C7A4 /* PasswordManager */;
+			targetProxy = 53A405DA138AE9370007C7A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		538D004413913F860002F60A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				538D004513913F860002F60A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		538D004613913F860002F60A /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				538D004713913F860002F60A /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53A405E7138AE9370007C7A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		53A405E8138AE9370007C7A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		53A405EA138AE9370007C7A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
+				INFOPLIST_FILE = Resources/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		53A405EB138AE9370007C7A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
+				INFOPLIST_FILE = Resources/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		53A405ED138AE9370007C7A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PasswordManager.app/PasswordManager";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
+				INFOPLIST_FILE = "Resources/Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		53A405EE138AE9370007C7A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PasswordManager.app/PasswordManager";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
+				INFOPLIST_FILE = "Resources/Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53A405AC138AE9360007C7A4 /* Build configuration list for PBXProject "PasswordManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A405E7138AE9370007C7A4 /* Debug */,
+				53A405E8138AE9370007C7A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53A405E9138AE9370007C7A4 /* Build configuration list for PBXNativeTarget "PasswordManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A405EA138AE9370007C7A4 /* Debug */,
+				53A405EB138AE9370007C7A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53A405EC138AE9370007C7A4 /* Build configuration list for PBXNativeTarget "PasswordManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A405ED138AE9370007C7A4 /* Debug */,
+				53A405EE138AE9370007C7A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53A405A9138AE9360007C7A4 /* Project object */;
+}

@@ -42,7 +42,9 @@
 
 - (void)viewDidLoad {
 
-    [[UYLPasswordManager sharedInstance] registerKey:@"secret" forIdentifier:@"manager"];
+    UYLPasswordManager *manager = [UYLPasswordManager sharedInstance];
+    // manager.accessMode = UYLPMAccessibleAlways;
+    [manager registerKey:@"secret" forIdentifier:@"manager"];
 }
 
 - (void)viewDidUnload {

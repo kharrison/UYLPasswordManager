@@ -39,19 +39,16 @@
 @synthesize viewController=_viewController;
 
 - (void)deviceWillLock {
-
     NSLog(@"device is about to be locked");
     [[UYLPasswordManager sharedInstance] purge];
     [self performSelector:@selector(checkKey) withObject:nil afterDelay:10];
 }
 
-- (void)applicationProtectedDataWillBecomeUnavailable:(UIApplication *)application {
-    
-    NSLog(@"applicationProtectedDataWillBecomeUnavailable");
-}
+//- (void)applicationProtectedDataWillBecomeUnavailable:(UIApplication *)application {
+//    NSLog(@"applicationProtectedDataWillBecomeUnavailable");
+//}
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    NSLog(@"applicationDidEnterBackround");
     [[UYLPasswordManager sharedInstance] purge];
 }
 
@@ -60,21 +57,20 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceWillLock) 
-												 name:UIApplicationProtectedDataWillBecomeUnavailable object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(deviceWillLock) 
+												 name:UIApplicationProtectedDataWillBecomeUnavailable 
+                                               object:nil];
 
     return YES;
 }
 
 - (void)checkKey {
-
     NSLog(@"checkKey");
-    UYLPasswordManager *manager = [UYLPasswordManager sharedInstance];
-    
-   	if ([manager validKey:@"secret" forIdentifier:@"keith"]) {
+    UYLPasswordManager *manager = [UYLPasswordManager sharedInstance]; 
+   	if ([manager validKey:@"secret" forIdentifier:@"manager"]) {
         NSLog(@"Password valid");
     }    
-
 }
 
 - (void)dealloc

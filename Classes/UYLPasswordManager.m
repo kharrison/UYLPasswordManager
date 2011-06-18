@@ -157,10 +157,6 @@ static UYLPasswordManager *_sharedInstance = nil;
             self.keychainValue = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
             [result release];
         }
-        
-        if (status != errSecSuccess) {
-            DLog(@"searchKeychain for identifier: %@ - %@", self.keychainIdentifier, [self resultCode:status]);
-        }
     }
 }
 
@@ -178,8 +174,7 @@ static UYLPasswordManager *_sharedInstance = nil;
 	if (status == errSecSuccess) {
 		return YES;
 	}
-	
-	DLog(@"createKeychainValue for identifier: %@ - %@",self.keychainIdentifier,[self resultCode:status]);
+
 	return NO;
 }
 
@@ -200,7 +195,6 @@ static UYLPasswordManager *_sharedInstance = nil;
 		return YES;
 	}
 	
-	DLog(@"updateKeychainValue for identifier: %@ - %@", self.keychainIdentifier, [self resultCode:status]);
 	return NO;
 }
 
@@ -211,9 +205,6 @@ static UYLPasswordManager *_sharedInstance = nil;
 	if (searchDictionary) {
 		OSStatus status = SecItemDelete((CFDictionaryRef)searchDictionary);
 		[searchDictionary release];
-        if (status != errSecSuccess) {
-            DLog(@"deleteKeychainValue for identifier: %@ - %@", self.keychainIdentifier, [self resultCode:status]);
-        }
 	}
 	self.keychainValue = nil;
 }

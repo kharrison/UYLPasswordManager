@@ -30,7 +30,7 @@ To access the shared instance of the UYLPasswordManager use the sharedInstance c
 Deleting Cached Items
 ---------------------
 
-The UYLPasswordManager class caches the last access to the keychain. This is efficient when the same item is accessed multiple times by an application. You should flush these cache entries when you no longer need then. Typical situations where you might want to do this include when the device is locked or when moving to the background.
+The UYLPasswordManager class caches the last access to the keychain. This is efficient when the same item is accessed multiple times by an application. You should flush these cache entries when you no longer need then. The cache is automatically cleared when the device is locked or when moving to the background.
 
     [manager purge];
 

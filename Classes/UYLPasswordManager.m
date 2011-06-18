@@ -44,6 +44,7 @@ NSString * const kKeychainService = @"UYLPasswordManager";
 - (NSMutableDictionary *)newSearchDictionary;
 - (NSString *)resultCode:(OSStatus)status;
 - (CFTypeRef)attributeAccess;
+- (void)deviceWillLockOrBackground:(NSNotification *)notification;
 
 @property (nonatomic,retain) NSString *keychainValue;
 @property (nonatomic,copy) NSString *keychainAccessGroup;
@@ -92,12 +93,22 @@ static UYLPasswordManager *_sharedInstance = nil;
     if (self) {
         _migrate = YES;
         _accessMode = UYLPMAccessibleWhenUnlocked;
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(deviceWillLockOrBackground:) 
+                                                     name:UIApplicationProtectedDataWillBecomeUnavailable 
+                                                   object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(deviceWillLockOrBackground:) 
+                                                     name:UIApplicationDidEnterBackgroundNotification 
+                                                   object:nil];
+
     }
     return self;
 }
 
 - (void)dealloc {
 	
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_keychainAccessGroup release];
 	[_keychainIdentifier release];
 	[_keychainValue release];
@@ -150,7 +161,7 @@ static UYLPasswordManager *_sharedInstance = nil;
         [searchDictionary setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnData];
         
         NSData *result = nil;
-        OSStatus status = SecItemCopyMatching((CFDictionaryRef)searchDictionary, (CFTypeRef *)&result);
+        SecItemCopyMatching((CFDictionaryRef)searchDictionary, (CFTypeRef *)&result);
         [searchDictionary release];
         
         if (result) {
@@ -203,7 +214,7 @@ static UYLPasswordManager *_sharedInstance = nil;
 	NSMutableDictionary *searchDictionary = [self newSearchDictionary];
 	
 	if (searchDictionary) {
-		OSStatus status = SecItemDelete((CFDictionaryRef)searchDictionary);
+		SecItemDelete((CFDictionaryRef)searchDictionary);
 		[searchDictionary release];
 	}
 	self.keychainValue = nil;
@@ -281,6 +292,10 @@ static UYLPasswordManager *_sharedInstance = nil;
             return self.migrate ? kSecAttrAccessibleWhenUnlocked : kSecAttrAccessibleWhenUnlockedThisDeviceOnly;
             break;
     }
+}
+
+- (void)deviceWillLockOrBackground:(NSNotification *)notification {
+    [self purge];
 }
 
 #pragma mark -

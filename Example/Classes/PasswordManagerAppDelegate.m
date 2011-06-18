@@ -38,18 +38,9 @@
 @synthesize window=_window;
 @synthesize viewController=_viewController;
 
-- (void)deviceWillLock {
-    NSLog(@"device is about to be locked");
-    [[UYLPasswordManager sharedInstance] purge];
+- (void)applicationProtectedDataWillBecomeUnavailable:(UIApplication *)application {
+    NSLog(@"applicationProtectedDataWillBecomeUnavailable");
     [self performSelector:@selector(checkKey) withObject:nil afterDelay:10];
-}
-
-//- (void)applicationProtectedDataWillBecomeUnavailable:(UIApplication *)application {
-//    NSLog(@"applicationProtectedDataWillBecomeUnavailable");
-//}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    [[UYLPasswordManager sharedInstance] purge];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -57,11 +48,6 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-	[[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(deviceWillLock) 
-												 name:UIApplicationProtectedDataWillBecomeUnavailable 
-                                               object:nil];
-
     return YES;
 }
 

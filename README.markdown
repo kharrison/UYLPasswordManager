@@ -235,7 +235,7 @@ Miscellaneous Methods
 
     - (void)purge
 
-Removes any cached keychain data. Use this method to ensure that all sensitive keychain data is removed from memory. You should consider calling this method when a device is locked or when moving to the background unless you know you will need to access the keychain in those states.
+Removes any cached keychain data. Use this method to ensure that all sensitive keychain data is removed from memory. This method is automatically invoked when the device is locked or when the application enters the background.
 
 Properties
 ----------

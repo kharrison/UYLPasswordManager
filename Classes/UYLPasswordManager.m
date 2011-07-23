@@ -165,7 +165,10 @@ static UYLPasswordManager *_sharedInstance = nil;
         [searchDictionary release];
         
         if (result) {
-            self.keychainValue = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+            NSString *stringResult = [[NSString alloc] initWithData:result 
+                                                           encoding:NSUTF8StringEncoding];
+            self.keychainValue = stringResult;
+            [stringResult release];
             [result release];
         }
     }

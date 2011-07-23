@@ -43,6 +43,10 @@
     [self performSelector:@selector(checkKey) withObject:nil afterDelay:10];
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"applicationDidEnterBackground");
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window.rootViewController = self.viewController;

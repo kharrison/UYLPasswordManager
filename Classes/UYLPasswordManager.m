@@ -2,7 +2,7 @@
 //  UYLPasswordManager.m
 //
 //  Created by Keith Harrison on 23-May-2011 http://useyourloaf.com
-//  Copyright (c) 2011 Keith Harrison. All rights reserved.
+//  Copyright (c) 2012 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -46,19 +46,13 @@ NSString * const kKeychainService = @"UYLPasswordManager";
 - (CFTypeRef)attributeAccess;
 - (void)deviceWillLockOrBackground:(NSNotification *)notification;
 
-@property (nonatomic,retain) NSString *keychainValue;
+@property (nonatomic,strong) NSString *keychainValue;
 @property (nonatomic,copy) NSString *keychainAccessGroup;
 @property (nonatomic,copy) NSString *keychainIdentifier;
 
 @end
 
 @implementation UYLPasswordManager
-
-@synthesize migrate=_migrate;
-@synthesize accessMode=_accessMode;
-@synthesize keychainValue=_keychainValue;
-@synthesize keychainIdentifier=_keychainIdentifier;
-@synthesize keychainAccessGroup=_keychainAccessGroup;
 
 #pragma mark -
 #pragma mark === Shared Instance Methods ===
@@ -79,7 +73,6 @@ static UYLPasswordManager *_sharedInstance = nil;
 + (void)dropShared {
 	
 	if (_sharedInstance) {
-		[_sharedInstance release];
 		_sharedInstance = nil;
 	}
 }
@@ -109,10 +102,6 @@ static UYLPasswordManager *_sharedInstance = nil;
 - (void)dealloc {
 	
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [_keychainAccessGroup release];
-	[_keychainIdentifier release];
-	[_keychainValue release];
-	[super dealloc];
 }
 
 #pragma mark -
@@ -125,7 +114,6 @@ static UYLPasswordManager *_sharedInstance = nil;
 		return;
 	}
 	
-	[_keychainIdentifier release];
 	_keychainIdentifier = nil;
 	self.keychainValue = nil;
 
@@ -140,7 +128,6 @@ static UYLPasswordManager *_sharedInstance = nil;
 		return;
 	}
 	
-    [_keychainAccessGroup release];
 	self.keychainValue = nil;
     
 	if (newValue) {
@@ -157,19 +144,17 @@ static UYLPasswordManager *_sharedInstance = nil;
     if (self.keychainValue == nil) {
         NSMutableDictionary *searchDictionary = [self newSearchDictionary];
 
-        [searchDictionary setObject:(id)kSecMatchLimitOne forKey:(id)kSecMatchLimit];
-        [searchDictionary setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnData];
+        searchDictionary[(__bridge id)kSecMatchLimit] = (__bridge id)kSecMatchLimitOne;
+        searchDictionary[(__bridge id)kSecReturnData] = (id)kCFBooleanTrue;
         
-        NSData *result = nil;
-        SecItemCopyMatching((CFDictionaryRef)searchDictionary, (CFTypeRef *)&result);
-        [searchDictionary release];
+        CFTypeRef cfResult = nil;
+        SecItemCopyMatching((__bridge CFDictionaryRef)searchDictionary, &cfResult);
         
-        if (result) {
+        if (cfResult) {
+            NSData *result = (__bridge NSData *)cfResult;
             NSString *stringResult = [[NSString alloc] initWithData:result 
                                                            encoding:NSUTF8StringEncoding];
             self.keychainValue = stringResult;
-            [stringResult release];
-            [result release];
         }
     }
 }
@@ -179,11 +164,10 @@ static UYLPasswordManager *_sharedInstance = nil;
 	NSMutableDictionary *dictionary = [self newSearchDictionary];
 
 	NSData *passwordData = [password dataUsingEncoding:NSUTF8StringEncoding];
-	[dictionary setObject:passwordData forKey:(id)kSecValueData];
-    [dictionary setObject:(id)[self attributeAccess] forKey:(id)kSecAttrAccessible];
+	dictionary[(__bridge id)kSecValueData] = passwordData;
+    dictionary[(__bridge id)kSecAttrAccessible] = (id)[self attributeAccess];
 	
-	OSStatus status = SecItemAdd((CFDictionaryRef)dictionary, NULL);
-	[dictionary release];
+	OSStatus status = SecItemAdd((__bridge CFDictionaryRef)dictionary, NULL);
 	
 	if (status == errSecSuccess) {
 		return YES;
@@ -197,13 +181,11 @@ static UYLPasswordManager *_sharedInstance = nil;
 	NSMutableDictionary *searchDictionary = [self newSearchDictionary];
 	NSMutableDictionary *updateDictionary = [[NSMutableDictionary alloc] init];
 	NSData *passwordData = [password dataUsingEncoding:NSUTF8StringEncoding];
-	[updateDictionary setObject:passwordData forKey:(id)kSecValueData];
-    [updateDictionary setObject:(id)[self attributeAccess] forKey:(id)kSecAttrAccessible];
+	updateDictionary[(__bridge id)kSecValueData] = passwordData;
+    updateDictionary[(__bridge id)kSecAttrAccessible] = (id)[self attributeAccess];
 	
-	OSStatus status = SecItemUpdate((CFDictionaryRef)searchDictionary, (CFDictionaryRef)updateDictionary);
+	OSStatus status = SecItemUpdate((__bridge CFDictionaryRef)searchDictionary, (__bridge CFDictionaryRef)updateDictionary);
 	
-	[searchDictionary release];
-	[updateDictionary release];
 	
 	if (status == errSecSuccess) {
 		return YES;
@@ -217,8 +199,7 @@ static UYLPasswordManager *_sharedInstance = nil;
 	NSMutableDictionary *searchDictionary = [self newSearchDictionary];
 	
 	if (searchDictionary) {
-		SecItemDelete((CFDictionaryRef)searchDictionary);
-		[searchDictionary release];
+		SecItemDelete((__bridge CFDictionaryRef)searchDictionary);
 	}
 	self.keychainValue = nil;
 }
@@ -231,13 +212,13 @@ static UYLPasswordManager *_sharedInstance = nil;
 		NSData *encodedIdentifier = [self.keychainIdentifier dataUsingEncoding:NSUTF8StringEncoding];
 		
 		searchDictionary = [[NSMutableDictionary alloc] init];
-		[searchDictionary setObject:(id)kSecClassGenericPassword forKey:(id)kSecClass];
-		[searchDictionary setObject:encodedIdentifier forKey:(id)kSecAttrGeneric];
-		[searchDictionary setObject:encodedIdentifier forKey:(id)kSecAttrAccount];
-		[searchDictionary setObject:kKeychainService forKey:(id)kSecAttrService];
+		searchDictionary[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
+		searchDictionary[(__bridge id)kSecAttrGeneric] = encodedIdentifier;
+		searchDictionary[(__bridge id)kSecAttrAccount] = encodedIdentifier;
+		searchDictionary[(__bridge id)kSecAttrService] = kKeychainService;
         		
 		if (self.keychainAccessGroup) {
-			[searchDictionary setObject:self.keychainAccessGroup forKey:(id)kSecAttrAccessGroup];
+			searchDictionary[(__bridge id)kSecAttrAccessGroup] = self.keychainAccessGroup;
 		}
 	}
 	return searchDictionary;
@@ -274,7 +255,7 @@ static UYLPasswordManager *_sharedInstance = nil;
 			return @"Unable to decode the provided data";
 			break;
 		default:
-			return [NSString stringWithFormat:@"Unknown error: %d",status];
+			return [NSString stringWithFormat:@"Unknown error: %ld",status];
 			break;
 	}
 }

@@ -30,13 +30,9 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 
 #import "PasswordManagerAppDelegate.h"
-#import "PasswordManagerViewController.h"
 #import "UYLPasswordManager.h"
 
 @implementation PasswordManagerAppDelegate
-
-@synthesize window=_window;
-@synthesize viewController=_viewController;
 
 - (void)applicationProtectedDataWillBecomeUnavailable:(UIApplication *)application {
     NSLog(@"applicationProtectedDataWillBecomeUnavailable");
@@ -49,9 +45,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
@@ -63,11 +56,5 @@
     }    
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [_viewController release];
-    [super dealloc];
-}
 
 @end

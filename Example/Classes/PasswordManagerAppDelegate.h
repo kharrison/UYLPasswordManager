@@ -31,13 +31,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class PasswordManagerViewController;
+@interface PasswordManagerAppDelegate : NSObject <UIApplicationDelegate>
 
-@interface PasswordManagerAppDelegate : NSObject <UIApplicationDelegate> {
-
-}
-
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet PasswordManagerViewController *viewController;
+@property (strong, nonatomic) UIWindow *window;
 
 @end

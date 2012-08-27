@@ -2,7 +2,7 @@
 //  PasswordManager.h
 //  
 //  Created by Keith Harrison on 23-May-2011 http://useyourloaf.com
-//  Copyright (c) 2011 Keith Harrison. All rights reserved.
+//  Copyright (c) 2012 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:

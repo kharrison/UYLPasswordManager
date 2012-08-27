@@ -37,5 +37,5 @@
 @private
     
 }
-@property (nonatomic,assign) UYLPasswordManager *passwordManager;
+@property (nonatomic,weak) UYLPasswordManager *passwordManager;
 @end

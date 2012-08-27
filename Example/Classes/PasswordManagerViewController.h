@@ -2,7 +2,7 @@
 //  PasswordManagerViewController.h
 //
 //  Created by Keith Harrison on 23-May-2011 http://useyourloaf.com
-//  Copyright (c) 2011 Keith Harrison. All rights reserved.
+//  Copyright (c) 2012 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -32,11 +32,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PasswordManagerViewController : UIViewController <UITextFieldDelegate> {
-    
-}
+@interface PasswordManagerViewController : UIViewController <UITextFieldDelegate>
 
-@property (nonatomic, retain) IBOutlet UILabel *pmLabel;
-@property (nonatomic, retain) IBOutlet UITextField *username;
+@property (nonatomic, weak) IBOutlet UILabel *pmLabel;
+@property (nonatomic, weak) IBOutlet UITextField *username;
 
 @end

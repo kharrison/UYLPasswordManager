@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53673EF515EBCF8D009A76E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53673EF415EBCF8D009A76E9 /* Main.storyboard */; };
 		538D004C13913F860002F60A /* PasswordManagerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D003E13913F860002F60A /* PasswordManagerAppDelegate.m */; };
 		538D004D13913F860002F60A /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004013913F860002F60A /* PasswordManagerViewController.m */; };
 		538D004E13913F860002F60A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004113913F860002F60A /* main.m */; };
 		538D004F13913F860002F60A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538D004413913F860002F60A /* InfoPlist.strings */; };
-		538D005013913F860002F60A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538D004613913F860002F60A /* MainWindow.xib */; };
-		538D005313913F860002F60A /* PasswordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 538D004A13913F860002F60A /* PasswordManagerViewController.xib */; };
 		538D005C1391409C0002F60A /* PasswordManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D00581391409C0002F60A /* PasswordManagerTests.m */; };
 		538D005D1391409C0002F60A /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D005A1391409C0002F60A /* UYLPasswordManager.m */; };
 		538D005E1391409C0002F60A /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D005A1391409C0002F60A /* UYLPasswordManager.m */; };
@@ -37,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		53673EF415EBCF8D009A76E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		538D003D13913F860002F60A /* PasswordManagerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerAppDelegate.h; sourceTree = "<group>"; };
 		538D003E13913F860002F60A /* PasswordManagerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerAppDelegate.m; sourceTree = "<group>"; };
 		538D003F13913F860002F60A /* PasswordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerViewController.h; sourceTree = "<group>"; };
@@ -44,9 +44,7 @@
 		538D004113913F860002F60A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		538D004213913F860002F60A /* PasswordManager-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PasswordManager-Prefix.pch"; sourceTree = "<group>"; };
 		538D004513913F860002F60A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		538D004713913F860002F60A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		538D004913913F860002F60A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		538D004A13913F860002F60A /* PasswordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordManagerViewController.xib; sourceTree = "<group>"; };
 		538D004B13913F860002F60A /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		538D00571391409C0002F60A /* PasswordManagerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerTests.h; sourceTree = "<group>"; };
 		538D00581391409C0002F60A /* PasswordManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerTests.m; sourceTree = "<group>"; };
@@ -114,10 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				538D004413913F860002F60A /* InfoPlist.strings */,
-				538D004613913F860002F60A /* MainWindow.xib */,
 				538D004913913F860002F60A /* Info.plist */,
-				538D004A13913F860002F60A /* PasswordManagerViewController.xib */,
 				538D004B13913F860002F60A /* Tests-Info.plist */,
+				53673EF415EBCF8D009A76E9 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -218,6 +215,9 @@
 /* Begin PBXProject section */
 		53A405A9138AE9360007C7A4 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
 			buildConfigurationList = 53A405AC138AE9360007C7A4 /* Build configuration list for PBXProject "PasswordManager" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -242,8 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				538D004F13913F860002F60A /* InfoPlist.strings in Resources */,
-				538D005013913F860002F60A /* MainWindow.xib in Resources */,
-				538D005313913F860002F60A /* PasswordManagerViewController.xib in Resources */,
+				53673EF515EBCF8D009A76E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,14 +311,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		538D004613913F860002F60A /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				538D004713913F860002F60A /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -332,10 +323,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -346,10 +337,10 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -359,12 +350,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -374,11 +368,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -390,12 +387,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PasswordManager.app/PasswordManager";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Resources/Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -412,12 +411,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PasswordManager.app/PasswordManager";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Resources/Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",

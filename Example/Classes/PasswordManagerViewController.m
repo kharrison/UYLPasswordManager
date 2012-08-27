@@ -1,7 +1,7 @@
 //
 //  PasswordManagerViewController.m
 //  Created by Keith Harrison on 23-May-2011 http://useyourloaf.com
-//  Copyright (c) 2011 Keith Harrison. All rights reserved.
+//  Copyright (c) 2012 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -33,9 +33,6 @@
 
 @implementation PasswordManagerViewController
 
-@synthesize pmLabel=_pmLabel;
-@synthesize username=_username;
-
 #pragma mark -
 #pragma mark === Initialization and shutdown ===
 #pragma mark -
@@ -45,18 +42,6 @@
     UYLPasswordManager *manager = [UYLPasswordManager sharedInstance];
     // manager.accessMode = UYLPMAccessibleAlways;
     [manager registerKey:@"secret" forIdentifier:@"manager"];
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    self.pmLabel = nil;
-    self.username = nil;
-}
-
-- (void)dealloc {
-    [_username release];
-    [_pmLabel release];
-    [super dealloc];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

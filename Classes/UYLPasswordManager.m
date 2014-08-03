@@ -340,6 +340,17 @@ static UYLPasswordManager *_sharedInstance = nil;
 	return result;
 }
 
+- (NSString *)keyForIdentifier:(NSString *)identifier inGroup:(NSString *)group {
+    if (identifier) {
+        self.keychainAccessGroup = group;
+        self.keychainIdentifier = identifier;
+        [self searchKeychain];
+        return self.keychainValue;
+    } else {
+        return nil;
+    }
+}
+
 - (void)deleteKeyForIdentifier:(NSString *)identifier inGroup:(NSString *)group {
 
     self.keychainAccessGroup = group;
@@ -358,6 +369,11 @@ static UYLPasswordManager *_sharedInstance = nil;
 - (BOOL)validKey:(NSString *)key forIdentifier:(NSString *)identifier {
     BOOL result = [self validKey:key forIdentifier:identifier inGroup:nil];
 	return result;
+}
+
+- (NSString *)keyForIdentifier:(NSString *)identifier {
+    NSString *result = [self keyForIdentifier:identifier inGroup:nil];
+  return result;
 }
 
 @end

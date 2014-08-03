@@ -53,9 +53,11 @@ typedef enum _UYLPMAccessMode {
 - (void)registerKey:(NSString *)key forIdentifier:(NSString *)identifier inGroup:(NSString *)group;
 - (void)deleteKeyForIdentifier:(NSString *)identifier inGroup:(NSString *)group;
 - (BOOL)validKey:(NSString *)key forIdentifier:(NSString *)identifier inGroup:(NSString *)group;
+- (NSString *)keyForIdentifier:(NSString *)identifier inGroup:(NSString *)group;
 
 - (void)registerKey:(NSString *)key forIdentifier:(NSString *)identifier;
 - (void)deleteKeyForIdentifier:(NSString *)identifier;
 - (BOOL)validKey:(NSString *)key forIdentifier:(NSString *)identifier;
+- (NSString *)keyForIdentifier:(NSString *)identifier;
 
 @end

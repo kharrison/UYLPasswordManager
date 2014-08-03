@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53435CE3198EB3BE0057605F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53435CE2198EB3BE0057605F /* Default-568h@2x.png */; };
 		53673EF515EBCF8D009A76E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53673EF415EBCF8D009A76E9 /* Main.storyboard */; };
 		538D004C13913F860002F60A /* PasswordManagerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D003E13913F860002F60A /* PasswordManagerAppDelegate.m */; };
 		538D004D13913F860002F60A /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004013913F860002F60A /* PasswordManagerViewController.m */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		53435CE2198EB3BE0057605F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		53673EF415EBCF8D009A76E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		538D003D13913F860002F60A /* PasswordManagerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerAppDelegate.h; sourceTree = "<group>"; };
 		538D003E13913F860002F60A /* PasswordManagerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerAppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		538D004313913F860002F60A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				53435CE2198EB3BE0057605F /* Default-568h@2x.png */,
 				538D004413913F860002F60A /* InfoPlist.strings */,
 				538D004913913F860002F60A /* Info.plist */,
 				538D004B13913F860002F60A /* Tests-Info.plist */,
@@ -216,7 +219,7 @@
 		53A405A9138AE9360007C7A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = 53A405AC138AE9360007C7A4 /* Build configuration list for PBXProject "PasswordManager" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -243,6 +246,7 @@
 			files = (
 				538D004F13913F860002F60A /* InfoPlist.strings in Resources */,
 				53673EF515EBCF8D009A76E9 /* Main.storyboard in Resources */,
+				53435CE3198EB3BE0057605F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +321,6 @@
 		53A405E7138AE9370007C7A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -327,6 +330,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -334,7 +338,6 @@
 		53A405E8138AE9370007C7A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_VERSION = "";

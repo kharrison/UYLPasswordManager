@@ -46,6 +46,16 @@ For example, to store a password you might use the user name as the identifier.
 
     [manager registerKey:password forIdentifier:username];
 
+Retrieving an Item from the Keychain
+---------------------
+
+To retrieve a key for an identifier:
+
+    NSString *result = [manager keyForIdentifier:username];
+
+If there is no matching identifier in the Keychain this will return nil.
+
+
 Searching for an Item
 ---------------------
 
@@ -113,7 +123,7 @@ You then need to add an entitlements plist file to the Xcode project (use Add ->
 Accessing a Keychain Group
 --------------------------
 
-The UYLPasswordManager methods for adding and searching for keychain items are all available in a form that takes an additional group parameter:
+The UYLPasswordManager methods for adding, retrieving, and searching for keychain items are all available in a form that takes an additional group parameter:
 
     [manager registerKey:password forIdentifier:username inGroup:group];
 

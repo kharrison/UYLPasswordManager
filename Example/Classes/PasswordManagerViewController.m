@@ -39,6 +39,7 @@
 
 - (void)viewDidLoad {
 
+    [super viewDidLoad];
     UYLPasswordManager *manager = [UYLPasswordManager sharedInstance];
     // manager.accessMode = UYLPMAccessibleAlways;
     [manager registerKey:@"secret" forIdentifier:@"manager"];

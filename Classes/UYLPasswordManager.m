@@ -2,7 +2,7 @@
 //  UYLPasswordManager.m
 //
 //  Created by Keith Harrison on 23-May-2011 http://useyourloaf.com
-//  Copyright (c) 2012 Keith Harrison. All rights reserved.
+//  Copyright (c) 2014 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -155,6 +155,7 @@ static UYLPasswordManager *_sharedInstance = nil;
             NSString *stringResult = [[NSString alloc] initWithData:result 
                                                            encoding:NSUTF8StringEncoding];
             self.keychainValue = stringResult;
+            CFRelease(cfResult);
         }
     }
 }

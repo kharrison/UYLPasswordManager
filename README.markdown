@@ -3,7 +3,7 @@ UYLPasswordManager - Simple Access to the iOS Keychain
 
 The UYLPasswordManager class provides a simple wrapper around Apple Keychain Services on iOS devices. The class is designed to make it quick and easy to create, read, update and delete keychain items. Keychain groups are also supported as is the ability to set the data migration and protection attributes of keychain items.
 
-UYLPasswordManager is compatible with iOS version 5.0 or later. The password manager code makes use of ARC for memory management and the modern Objective-C language. If you need support for earlier releases of iOS you should consider using a previos version of this code.
+UYLPasswordManager is tested with iOS version 6.0 and later. The password manager code makes use of ARC for memory management and the modern Objective-C language.
 
 Installation
 ------------

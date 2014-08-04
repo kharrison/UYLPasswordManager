@@ -93,6 +93,14 @@ static NSString *testKey = @"secret";
     STAssertTrue(result, @"Keychain should contain identifier %@", testIdentifier);
 }
 
+- (void)testKeyForIdentifier {
+    
+    [self.passwordManager registerKey:testKey forIdentifier:testIdentifier];
+    
+    NSString *key = [self.passwordManager keyForIdentifier:testIdentifier];
+    STAssertTrue([key isEqualToString:testKey], @"Keychain should return %@ got %@", testKey, key);
+}
+
 - (void)testDeleteKey {
     
     [self.passwordManager registerKey:testKey forIdentifier:testIdentifier];

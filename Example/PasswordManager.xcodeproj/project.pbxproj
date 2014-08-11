@@ -13,10 +13,10 @@
 		538D004D13913F860002F60A /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004013913F860002F60A /* PasswordManagerViewController.m */; };
 		538D004E13913F860002F60A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004113913F860002F60A /* main.m */; };
 		538D004F13913F860002F60A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538D004413913F860002F60A /* InfoPlist.strings */; };
-		538D005C1391409C0002F60A /* PasswordManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D00581391409C0002F60A /* PasswordManagerTests.m */; };
-		538D005D1391409C0002F60A /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D005A1391409C0002F60A /* UYLPasswordManager.m */; };
-		538D005E1391409C0002F60A /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D005A1391409C0002F60A /* UYLPasswordManager.m */; };
 		538D006813914C900002F60A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405FF138AF2140007C7A4 /* Security.framework */; };
+		539BCC2C19994F2700E3D11F /* PasswordManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 539BCC2B19994F2700E3D11F /* PasswordManagerTests.m */; };
+		539BCC3019994FB500E3D11F /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 539BCC2F19994FB500E3D11F /* UYLPasswordManager.m */; };
+		539BCC3119994FB500E3D11F /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 539BCC2F19994FB500E3D11F /* UYLPasswordManager.m */; };
 		53A405B7138AE9370007C7A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405B6138AE9370007C7A4 /* UIKit.framework */; };
 		53A405B9138AE9370007C7A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405B8138AE9370007C7A4 /* Foundation.framework */; };
 		53A405BB138AE9370007C7A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405BA138AE9370007C7A4 /* CoreGraphics.framework */; };
@@ -48,12 +48,12 @@
 		538D004513913F860002F60A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		538D004913913F860002F60A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		538D004B13913F860002F60A /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		538D00571391409C0002F60A /* PasswordManagerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerTests.h; sourceTree = "<group>"; };
-		538D00581391409C0002F60A /* PasswordManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerTests.m; sourceTree = "<group>"; };
-		538D00591391409C0002F60A /* UYLPasswordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UYLPasswordManager.h; path = ../Classes/UYLPasswordManager.h; sourceTree = "<group>"; };
-		538D005A1391409C0002F60A /* UYLPasswordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UYLPasswordManager.m; path = ../Classes/UYLPasswordManager.m; sourceTree = "<group>"; };
 		538D005F139147240002F60A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		538D006A13914F400002F60A /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
+		539BCC2A19994F2700E3D11F /* PasswordManagerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerTests.h; sourceTree = "<group>"; };
+		539BCC2B19994F2700E3D11F /* PasswordManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerTests.m; sourceTree = "<group>"; };
+		539BCC2E19994FB500E3D11F /* UYLPasswordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLPasswordManager.h; sourceTree = "<group>"; };
+		539BCC2F19994FB500E3D11F /* UYLPasswordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLPasswordManager.m; sourceTree = "<group>"; };
 		53A405B2138AE9370007C7A4 /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A405B6138AE9370007C7A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		53A405B8138AE9370007C7A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,24 +122,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		538D00551391407C0002F60A /* Classes */ = {
+		539BCC2919994F2700E3D11F /* PasswordManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				538D00561391409C0002F60A /* UnitTests */,
-				538D00591391409C0002F60A /* UYLPasswordManager.h */,
-				538D005A1391409C0002F60A /* UYLPasswordManager.m */,
+				539BCC2A19994F2700E3D11F /* PasswordManagerTests.h */,
+				539BCC2B19994F2700E3D11F /* PasswordManagerTests.m */,
 			);
-			name = Classes;
+			name = PasswordManagerTests;
+			path = ../PasswordManagerTests;
 			sourceTree = "<group>";
 		};
-		538D00561391409C0002F60A /* UnitTests */ = {
+		539BCC2D19994FB500E3D11F /* PasswordManager */ = {
 			isa = PBXGroup;
 			children = (
-				538D00571391409C0002F60A /* PasswordManagerTests.h */,
-				538D00581391409C0002F60A /* PasswordManagerTests.m */,
+				539BCC2E19994FB500E3D11F /* UYLPasswordManager.h */,
+				539BCC2F19994FB500E3D11F /* UYLPasswordManager.m */,
 			);
-			name = UnitTests;
-			path = ../Classes/UnitTests;
+			name = PasswordManager;
+			path = ../PasswordManager;
 			sourceTree = "<group>";
 		};
 		53A405A7138AE9360007C7A4 = {
@@ -147,7 +147,8 @@
 			children = (
 				538D006A13914F400002F60A /* README.markdown */,
 				538D005F139147240002F60A /* LICENSE */,
-				538D00551391407C0002F60A /* Classes */,
+				539BCC2D19994FB500E3D11F /* PasswordManager */,
+				539BCC2919994F2700E3D11F /* PasswordManagerTests */,
 				538D001E13913F2B0002F60A /* ExampleApp */,
 				53A405B5138AE9370007C7A4 /* Frameworks */,
 				53A405B3138AE9370007C7A4 /* Products */,
@@ -283,7 +284,7 @@
 				538D004C13913F860002F60A /* PasswordManagerAppDelegate.m in Sources */,
 				538D004D13913F860002F60A /* PasswordManagerViewController.m in Sources */,
 				538D004E13913F860002F60A /* main.m in Sources */,
-				538D005D1391409C0002F60A /* UYLPasswordManager.m in Sources */,
+				539BCC3019994FB500E3D11F /* UYLPasswordManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +292,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538D005C1391409C0002F60A /* PasswordManagerTests.m in Sources */,
-				538D005E1391409C0002F60A /* UYLPasswordManager.m in Sources */,
+				539BCC2C19994F2700E3D11F /* PasswordManagerTests.m in Sources */,
+				539BCC3119994FB500E3D11F /* UYLPasswordManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

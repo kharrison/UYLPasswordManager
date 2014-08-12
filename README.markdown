@@ -13,7 +13,17 @@ To use the UYLPasswordManager class in an iOS application copy the following fil
 + UYLPasswordManager.h
 + UYLPasswordManager.m
 
-You also need to add the security framework ("Security.framework") to the list of libraries that your application links with.
+Using CocoaPods
+---------------
+
+To install with the [CocoaPods](http://cocoapods.org/) dependency manager create of modify a Podfile in the project directory as follows (assuming you target iOS 7):
+
+    platform :ios, '7.0'
+    pod "UYLPasswordManager" "~> 1.0"
+
+Then install:
+
+    $ pod install
 
 The Shared Instance
 ===================
@@ -166,7 +176,7 @@ The key value to be stored in the keychain. This is typically the password, or p
 The identifier of the keychain item to be stored.
 
 *group*
-The keychain access group. This parameter is option and may be set to nil.
+The keychain access group. This parameter is optional and may be set to nil.
 
 ### deleteKeyForIdentifier:inGroup:
 
@@ -180,7 +190,7 @@ Delete an item from the keychain.
 The identifier of the keychain item to be deleted.
 
 *group*
-The keychain access group. This parameter is option and may be set to nil.
+The keychain access group. This parameter is optional and may be set to nil.
 
 ### validKey:forIdentifier:inGroup:
 
@@ -197,7 +207,7 @@ The value of the key that you want to validate. This parameter can be nil in whi
 The identifier of the keychain item to search for.
 
 *group*
-The keychain access group. This parameter is option and may be set to nil.
+The keychain access group. This parameter is optional and may be set to nil.
 
 ### keyForIdentifier:inGroup:
 
@@ -208,10 +218,10 @@ Search the keychain for the identifier and if present return the value of the as
 #### Parameters
 
 *identifier*
-The identifier of the keychain item to be deleted.
+The identifier of the keychain item to search for.
 
 *group*
-The keychain access group. This parameter is option and may be set to nil.
+The keychain access group. This parameter is optional and may be set to nil.
 
 ### registerKey:forIdentifier:
 
@@ -261,7 +271,7 @@ Search the keychain for the identifier and if present return the value of the as
 #### Parameters
 
 *identifier*
-The identifier of the keychain item to be deleted.
+The identifier of the keychain item to search for.
 
 Miscellaneous Methods
 ---------------------

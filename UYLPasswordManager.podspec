@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "UYLPasswordManager"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0-beta"
   s.summary      = "Simple iOS Keychain Access"
   s.description  = <<-DESC
     The UYLPasswordManager class provides a simple wrapper around Apple Keychain
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.authors          = { "Keith Harrison" => "keith@useyourloaf.com" }
   s.social_media_url = 'https://twitter.com/kharrison'
   s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/kharrison/UYLPasswordManager.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/kharrison/UYLPasswordManager.git", :tag => "1.0.0-beta" }
   s.source_files  = "PasswordManager"
   s.requires_arc = true
 end

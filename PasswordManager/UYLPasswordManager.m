@@ -81,7 +81,7 @@ static UYLPasswordManager *_sharedInstance = nil;
 #pragma mark === Init Methods ===
 #pragma mark -
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         _migrate = YES;

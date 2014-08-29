@@ -19,7 +19,7 @@ Using CocoaPods
 To install with the [CocoaPods](http://cocoapods.org/) dependency manager create of modify a Podfile in the project directory as follows (assuming you target iOS 7):
 
     platform :ios, '7.0'
-    pod "UYLPasswordManager" "~> 1.0"
+    pod "UYLPasswordManager", "~> 1.0"
 
 Then install:
 

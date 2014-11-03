@@ -41,7 +41,7 @@ static NSString *testKey = @"secret";
 - (void) setUp {
 	NSLog(@"%@ setUp", self.name);
     self.passwordManager = [UYLPasswordManager sharedInstance];
-    STAssertNotNil(self.passwordManager, @"Did not init password manager");
+    XCTAssertNotNil(self.passwordManager, @"Did not init password manager");
 
     [self.passwordManager deleteKeyForIdentifier:testIdentifier];
 }
@@ -59,13 +59,13 @@ static NSString *testKey = @"secret";
 - (void)testNoIdentifierSet {
     
     BOOL result = [self.passwordManager validKey:nil forIdentifier:nil];
-    STAssertFalse(result, @"Identifier not set - should fail");
+    XCTAssertFalse(result, @"Identifier not set - should fail");
 }
 
 - (void)testKeyNotFound {
     
     BOOL result = [self.passwordManager validKey:nil forIdentifier:testIdentifier];
-    STAssertFalse(result, @"Keychain should not contain identifier %@", testIdentifier);
+    XCTAssertFalse(result, @"Keychain should not contain identifier %@", testIdentifier);
 }
 
 - (void)testRegisterAndFindKey {
@@ -73,7 +73,7 @@ static NSString *testKey = @"secret";
     [self.passwordManager registerKey:testKey forIdentifier:testIdentifier];
     
     BOOL result = [self.passwordManager validKey:testKey forIdentifier:testIdentifier];
-    STAssertTrue(result, @"Keychain should contain identifier %@", testIdentifier);
+    XCTAssertTrue(result, @"Keychain should contain identifier %@", testIdentifier);
 }
 
 - (void)testRegisterAndFindIdentifier {
@@ -81,7 +81,7 @@ static NSString *testKey = @"secret";
     [self.passwordManager registerKey:testKey forIdentifier:testIdentifier];
     
     BOOL result = [self.passwordManager validKey:nil forIdentifier:testIdentifier];
-    STAssertTrue(result, @"Keychain should contain identifier %@", testIdentifier);
+    XCTAssertTrue(result, @"Keychain should contain identifier %@", testIdentifier);
 }
 
 - (void)testRegisterPurgeAndFindKey {
@@ -90,7 +90,7 @@ static NSString *testKey = @"secret";
     [self.passwordManager purge];
     
     BOOL result = [self.passwordManager validKey:testKey forIdentifier:testIdentifier];
-    STAssertTrue(result, @"Keychain should contain identifier %@", testIdentifier);
+    XCTAssertTrue(result, @"Keychain should contain identifier %@", testIdentifier);
 }
 
 - (void)testKeyForIdentifier {
@@ -98,19 +98,19 @@ static NSString *testKey = @"secret";
     [self.passwordManager registerKey:testKey forIdentifier:testIdentifier];
     
     NSString *key = [self.passwordManager keyForIdentifier:testIdentifier];
-    STAssertTrue([key isEqualToString:testKey], @"Keychain should return %@ got %@", testKey, key);
+    XCTAssertTrue([key isEqualToString:testKey], @"Keychain should return %@ got %@", testKey, key);
 }
 
 - (void)testDeleteKey {
     
     [self.passwordManager registerKey:testKey forIdentifier:testIdentifier];
     BOOL result = [self.passwordManager validKey:testKey forIdentifier:testIdentifier];
-    STAssertTrue(result, @"Keychain should contain identifier %@", testIdentifier);
+    XCTAssertTrue(result, @"Keychain should contain identifier %@", testIdentifier);
     
     [self.passwordManager deleteKeyForIdentifier:testIdentifier];
     
     result = [self.passwordManager validKey:testKey forIdentifier:testIdentifier];
-    STAssertFalse(result, @"Keychain should not contain identifier %@", testIdentifier);
+    XCTAssertFalse(result, @"Keychain should not contain identifier %@", testIdentifier);
 }
 
 @end

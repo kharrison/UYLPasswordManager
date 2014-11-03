@@ -1,7 +1,7 @@
 //
 //  PasswordManagerTests.h
 //  Created by Keith Harrison on 25/05/2011 http://useyourloaf.com
-//  Copyright (c) 2011 Keith Harrison. All rights reserved.
+//  Copyright (c) 2011 - 2014 Keith Harrison. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without
 //  modification, are permitted provided that the following conditions are met:
@@ -29,11 +29,11 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 @class UYLPasswordManager;
 
-@interface PasswordManagerTests : SenTestCase {
+@interface PasswordManagerTests : XCTestCase {
 @private
     
 }

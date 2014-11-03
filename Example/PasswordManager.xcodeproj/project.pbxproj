@@ -58,7 +58,7 @@
 		53A405B6138AE9370007C7A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		53A405B8138AE9370007C7A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		53A405BA138AE9370007C7A4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		53A405D6138AE9370007C7A4 /* PasswordManagerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A405D6138AE9370007C7A4 /* PasswordManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A405FF138AF2140007C7A4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -159,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				53A405B2138AE9370007C7A4 /* PasswordManager.app */,
-				53A405D6138AE9370007C7A4 /* PasswordManagerTests.octest */,
+				53A405D6138AE9370007C7A4 /* PasswordManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 			);
 			name = PasswordManagerTests;
 			productName = PasswordManagerTests;
-			productReference = 53A405D6138AE9370007C7A4 /* PasswordManagerTests.octest */;
+			productReference = 53A405D6138AE9370007C7A4 /* PasswordManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

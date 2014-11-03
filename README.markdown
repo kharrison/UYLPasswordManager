@@ -3,7 +3,7 @@ UYLPasswordManager - Simple Access to the iOS Keychain
 
 The UYLPasswordManager class provides a simple wrapper around Apple Keychain Services on iOS devices. The class is designed to make it quick and easy to create, read, update and delete keychain items. Keychain groups are also supported as is the ability to set the data migration and protection attributes of keychain items.
 
-UYLPasswordManager is tested with iOS version 6.0 and later. The password manager code makes use of ARC for memory management and the modern Objective-C language.
+UYLPasswordManager is tested with iOS version 7.1 and later. That does not mean it will not work on earlier versions just that I no longer test on earlier versions. The password manager code makes use of ARC for memory management and the modern Objective-C language.
 
 Installation
 ------------
@@ -18,8 +18,8 @@ Using CocoaPods
 
 To install with the [CocoaPods](http://cocoapods.org/) dependency manager create of modify a Podfile in the project directory as follows (assuming you target iOS 7):
 
-    platform :ios, '7.0'
-    pod "UYLPasswordManager", "~> 1.0"
+    platform :ios, '7.1'
+    pod "UYLPasswordManager", "~> 1.1"
 
 Then install:
 

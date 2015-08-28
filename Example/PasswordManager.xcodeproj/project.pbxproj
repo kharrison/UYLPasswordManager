@@ -42,7 +42,6 @@
 		538D004213913F860002F60A /* PasswordManager-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PasswordManager-Prefix.pch"; sourceTree = "<group>"; };
 		538D004513913F860002F60A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		538D004913913F860002F60A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		538D004B13913F860002F60A /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		538D005F139147240002F60A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		538D006A13914F400002F60A /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
 		539075041B90A53E0033E2F1 /* PasswordManagerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +106,6 @@
 				53435CE2198EB3BE0057605F /* Default-568h@2x.png */,
 				538D004413913F860002F60A /* InfoPlist.strings */,
 				538D004913913F860002F60A /* Info.plist */,
-				538D004B13913F860002F60A /* Tests-Info.plist */,
 				53673EF415EBCF8D009A76E9 /* Main.storyboard */,
 			);
 			path = Resources;

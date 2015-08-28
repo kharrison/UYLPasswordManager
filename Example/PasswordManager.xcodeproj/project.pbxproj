@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53435CE3198EB3BE0057605F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53435CE2198EB3BE0057605F /* Default-568h@2x.png */; };
 		53673EF515EBCF8D009A76E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53673EF415EBCF8D009A76E9 /* Main.storyboard */; };
 		538D004C13913F860002F60A /* PasswordManagerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D003E13913F860002F60A /* PasswordManagerAppDelegate.m */; };
 		538D004D13913F860002F60A /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004013913F860002F60A /* PasswordManagerViewController.m */; };
 		538D004E13913F860002F60A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004113913F860002F60A /* main.m */; };
-		538D004F13913F860002F60A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 538D004413913F860002F60A /* InfoPlist.strings */; };
 		539075071B90A53F0033E2F1 /* PasswordManagerUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 539075061B90A53F0033E2F1 /* PasswordManagerUnitTests.m */; };
 		539BCC3019994FB500E3D11F /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 539BCC2F19994FB500E3D11F /* UYLPasswordManager.m */; };
 		53A405B7138AE9370007C7A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405B6138AE9370007C7A4 /* UIKit.framework */; };
@@ -32,7 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		53435CE2198EB3BE0057605F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		53673EF415EBCF8D009A76E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		538D003D13913F860002F60A /* PasswordManagerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerAppDelegate.h; sourceTree = "<group>"; };
 		538D003E13913F860002F60A /* PasswordManagerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerAppDelegate.m; sourceTree = "<group>"; };
@@ -40,7 +37,6 @@
 		538D004013913F860002F60A /* PasswordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerViewController.m; sourceTree = "<group>"; };
 		538D004113913F860002F60A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		538D004213913F860002F60A /* PasswordManager-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PasswordManager-Prefix.pch"; sourceTree = "<group>"; };
-		538D004513913F860002F60A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		538D004913913F860002F60A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		538D005F139147240002F60A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		538D006A13914F400002F60A /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
@@ -103,8 +99,6 @@
 		538D004313913F860002F60A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				53435CE2198EB3BE0057605F /* Default-568h@2x.png */,
-				538D004413913F860002F60A /* InfoPlist.strings */,
 				538D004913913F860002F60A /* Info.plist */,
 				53673EF415EBCF8D009A76E9 /* Main.storyboard */,
 			);
@@ -245,9 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538D004F13913F860002F60A /* InfoPlist.strings in Resources */,
 				53673EF515EBCF8D009A76E9 /* Main.storyboard in Resources */,
-				53435CE3198EB3BE0057605F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,17 +274,6 @@
 			targetProxy = 539075091B90A53F0033E2F1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		538D004413913F860002F60A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				538D004513913F860002F60A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5390750C1B90A53F0033E2F1 /* Debug */ = {

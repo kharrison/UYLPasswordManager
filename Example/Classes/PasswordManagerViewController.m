@@ -45,10 +45,6 @@
     [manager registerKey:@"secret" forIdentifier:@"manager"];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return YES;
-}
-
 #pragma mark -
 #pragma mark === Text field delegate methods ===
 #pragma mark -

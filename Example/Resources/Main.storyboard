@@ -1,67 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" promptedForUpgradeToXcode5="NO" initialViewController="Ro4-2V-0Jb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ro4-2V-0Jb">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <development version="5100" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Password Manager View Controller-->
         <scene sceneID="0oS-DY-BOM">
             <objects>
                 <viewController id="Ro4-2V-0Jb" customClass="PasswordManagerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3jj-jz-AeE"/>
+                        <viewControllerLayoutGuide type="bottom" id="MKk-e8-AnW"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YIA-4U-hGm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" clearButtonMode="whileEditing" id="XBa-gc-l0j">
-                                <rect key="frame" x="66" y="99" width="187" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Password Manager" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="sQD-kw-DTY">
+                                <rect key="frame" x="228" y="28" width="144" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" textAlignment="right" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="uP4-my-pCN">
+                                <rect key="frame" x="20" y="83" width="197" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="8" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XBa-gc-l0j">
+                                <rect key="frame" x="225" y="78" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="vbr-hS-ryo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="Ro4-2V-0Jb" id="rTe-zu-jp7"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Password Manager" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="sQD-kw-DTY">
-                                <rect key="frame" x="19" y="20" width="280" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" textAlignment="right" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="n4R-2g-Dkv">
+                                <rect key="frame" x="20" y="143" width="197" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" id="kpg-Dx-eBF">
-                                <rect key="frame" x="66" y="174" width="187" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textField opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="8" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kpg-Dx-eBF">
+                                <rect key="frame" x="225" y="138" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="NrR-QA-Jb2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="Ro4-2V-0Jb" id="aeb-sf-xSg"/>
                                 </connections>
                             </textField>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="XWX-5S-5xJ">
-                                <rect key="frame" x="20" y="220" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="XWX-5S-5xJ">
+                                <rect key="frame" x="20" y="228" width="560" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" minimumFontSize="10" id="n4R-2g-Dkv">
-                                <rect key="frame" x="29" y="144" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" minimumFontSize="10" id="uP4-my-pCN">
-                                <rect key="frame" x="29" y="70" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="n4R-2g-Dkv" firstAttribute="leading" secondItem="YIA-4U-hGm" secondAttribute="leadingMargin" id="2mf-Fo-Mq3"/>
+                            <constraint firstItem="XWX-5S-5xJ" firstAttribute="top" secondItem="kpg-Dx-eBF" secondAttribute="bottom" constant="60" id="2vA-5k-uw1"/>
+                            <constraint firstItem="kpg-Dx-eBF" firstAttribute="top" secondItem="XBa-gc-l0j" secondAttribute="bottom" constant="30" id="34C-AP-rf5"/>
+                            <constraint firstItem="kpg-Dx-eBF" firstAttribute="leading" secondItem="n4R-2g-Dkv" secondAttribute="trailing" constant="8" symbolic="YES" id="Lh7-fH-jPb"/>
+                            <constraint firstItem="n4R-2g-Dkv" firstAttribute="baseline" secondItem="kpg-Dx-eBF" secondAttribute="baseline" id="Mz4-dD-5yb"/>
+                            <constraint firstItem="XBa-gc-l0j" firstAttribute="leading" secondItem="uP4-my-pCN" secondAttribute="trailing" constant="8" symbolic="YES" id="YRZ-jZ-fu9"/>
+                            <constraint firstItem="XBa-gc-l0j" firstAttribute="top" secondItem="sQD-kw-DTY" secondAttribute="bottom" constant="30" id="dpt-e1-xjO"/>
+                            <constraint firstItem="sQD-kw-DTY" firstAttribute="centerX" secondItem="YIA-4U-hGm" secondAttribute="centerX" id="evs-zJ-zy1"/>
+                            <constraint firstItem="kpg-Dx-eBF" firstAttribute="centerX" secondItem="YIA-4U-hGm" secondAttribute="centerX" id="ggP-aP-pNy"/>
+                            <constraint firstItem="uP4-my-pCN" firstAttribute="leading" secondItem="YIA-4U-hGm" secondAttribute="leadingMargin" id="hq2-8Q-uie"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XWX-5S-5xJ" secondAttribute="trailing" id="kIl-ep-x4J"/>
+                            <constraint firstItem="XWX-5S-5xJ" firstAttribute="leading" secondItem="YIA-4U-hGm" secondAttribute="leadingMargin" id="nH2-To-EhW"/>
+                            <constraint firstItem="sQD-kw-DTY" firstAttribute="top" secondItem="3jj-jz-AeE" secondAttribute="bottom" constant="8" symbolic="YES" id="ryp-Bx-gSY"/>
+                            <constraint firstItem="uP4-my-pCN" firstAttribute="baseline" secondItem="XBa-gc-l0j" secondAttribute="baseline" id="wbj-1b-U1M"/>
+                            <constraint firstItem="XBa-gc-l0j" firstAttribute="centerX" secondItem="YIA-4U-hGm" secondAttribute="centerX" id="wj2-HM-pzV"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="pmLabel" destination="XWX-5S-5xJ" id="Exo-7g-tsR"/>
@@ -70,15 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5L-y4-O6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="534" y="207"/>
+            <point key="canvasLocation" x="1001.25" y="258.75"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination">
-            <size key="portraitSize" width="320" height="480"/>
-            <size key="landscapeSize" width="480" height="320"/>
-        </simulatedScreenMetrics>
-    </simulatedMetricsContainer>
 </document>

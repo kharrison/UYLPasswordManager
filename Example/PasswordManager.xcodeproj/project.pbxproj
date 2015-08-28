@@ -428,10 +428,11 @@
 				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.PasswordManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -449,10 +450,11 @@
 				GCC_PREFIX_HEADER = "PasswordManager-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.useyourloaf.PasswordManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -468,6 +470,7 @@
 				5390750D1B90A53F0033E2F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53A405AC138AE9360007C7A4 /* Build configuration list for PBXProject "PasswordManager" */ = {
 			isa = XCConfigurationList;

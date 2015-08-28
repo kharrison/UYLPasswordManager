@@ -48,8 +48,6 @@
 		539075041B90A53E0033E2F1 /* PasswordManagerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordManagerUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		539075061B90A53F0033E2F1 /* PasswordManagerUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerUnitTests.m; sourceTree = "<group>"; };
 		539075081B90A53F0033E2F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		539BCC2A19994F2700E3D11F /* PasswordManagerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerTests.h; sourceTree = "<group>"; };
-		539BCC2B19994F2700E3D11F /* PasswordManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerTests.m; sourceTree = "<group>"; };
 		539BCC2E19994FB500E3D11F /* UYLPasswordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UYLPasswordManager.h; sourceTree = "<group>"; };
 		539BCC2F19994FB500E3D11F /* UYLPasswordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UYLPasswordManager.m; sourceTree = "<group>"; };
 		53A405B2138AE9370007C7A4 /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,16 +122,6 @@
 			path = PasswordManagerUnitTests;
 			sourceTree = "<group>";
 		};
-		539BCC2919994F2700E3D11F /* PasswordManagerTests */ = {
-			isa = PBXGroup;
-			children = (
-				539BCC2A19994F2700E3D11F /* PasswordManagerTests.h */,
-				539BCC2B19994F2700E3D11F /* PasswordManagerTests.m */,
-			);
-			name = PasswordManagerTests;
-			path = ../PasswordManagerTests;
-			sourceTree = "<group>";
-		};
 		539BCC2D19994FB500E3D11F /* PasswordManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +138,6 @@
 				538D006A13914F400002F60A /* README.markdown */,
 				538D005F139147240002F60A /* LICENSE */,
 				539BCC2D19994FB500E3D11F /* PasswordManager */,
-				539BCC2919994F2700E3D11F /* PasswordManagerTests */,
 				538D001E13913F2B0002F60A /* ExampleApp */,
 				539075051B90A53E0033E2F1 /* PasswordManagerUnitTests */,
 				53A405B5138AE9370007C7A4 /* Frameworks */,

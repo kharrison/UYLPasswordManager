@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,7 +37,6 @@
 		538D003F13913F860002F60A /* PasswordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerViewController.h; sourceTree = "<group>"; };
 		538D004013913F860002F60A /* PasswordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerViewController.m; sourceTree = "<group>"; };
 		538D004113913F860002F60A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		538D004213913F860002F60A /* PasswordManager-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PasswordManager-Prefix.pch"; sourceTree = "<group>"; };
 		538D004913913F860002F60A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		538D005F139147240002F60A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		538D006A13914F400002F60A /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
@@ -80,7 +79,6 @@
 			children = (
 				538D003C13913F860002F60A /* Classes */,
 				538D004113913F860002F60A /* main.m */,
-				538D004213913F860002F60A /* PasswordManager-Prefix.pch */,
 				538D004313913F860002F60A /* Resources */,
 			);
 			name = ExampleApp;
@@ -214,7 +212,7 @@
 				};
 			};
 			buildConfigurationList = 53A405AC138AE9360007C7A4 /* Build configuration list for PBXProject "PasswordManager" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (

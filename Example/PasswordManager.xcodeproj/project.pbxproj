@@ -12,6 +12,7 @@
 		538D004D13913F860002F60A /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004013913F860002F60A /* PasswordManagerViewController.m */; };
 		538D004E13913F860002F60A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 538D004113913F860002F60A /* main.m */; };
 		539075071B90A53F0033E2F1 /* PasswordManagerUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 539075061B90A53F0033E2F1 /* PasswordManagerUnitTests.m */; };
+		5393FD351B90B401005A88A4 /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 539BCC2F19994FB500E3D11F /* UYLPasswordManager.m */; settings = {ASSET_TAGS = (); }; };
 		539BCC3019994FB500E3D11F /* UYLPasswordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 539BCC2F19994FB500E3D11F /* UYLPasswordManager.m */; };
 		53A405B7138AE9370007C7A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405B6138AE9370007C7A4 /* UIKit.framework */; };
 		53A405B9138AE9370007C7A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A405B8138AE9370007C7A4 /* Foundation.framework */; };
@@ -207,6 +208,9 @@
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = 53A405B1138AE9370007C7A4;
 					};
+					53A405B1138AE9370007C7A4 = {
+						DevelopmentTeam = LCC2J94N44;
+					};
 				};
 			};
 			buildConfigurationList = 53A405AC138AE9360007C7A4 /* Build configuration list for PBXProject "PasswordManager" */;
@@ -251,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				539075071B90A53F0033E2F1 /* PasswordManagerUnitTests.m in Sources */,
+				5393FD351B90B401005A88A4 /* UYLPasswordManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

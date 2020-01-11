@@ -16,7 +16,7 @@ To use the UYLPasswordManager class in an iOS application copy the following fil
 Using CocoaPods
 ---------------
 
-To install with the [CocoaPods](http://cocoapods.org/) dependency manager create of modify a Podfile in the project directory as follows (assuming you target iOS 8.4):
+To install with the [CocoaPods](https://cocoapods.org/) dependency manager create of modify a Podfile in the project directory as follows (assuming you target iOS 8.4):
 
     platform :ios, '8.4'
     pod "UYLPasswordManager", "~> 1.1"

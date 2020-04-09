@@ -18,8 +18,10 @@ Using CocoaPods
 
 To install with the [CocoaPods](https://cocoapods.org/) dependency manager create of modify a Podfile in the project directory as follows (assuming you target iOS 8.4):
 
-    platform :ios, '8.4'
-    pod "UYLPasswordManager", "~> 1.1"
+```ruby
+platform :ios, '8.4'
+pod "UYLPasswordManager", "~> 1.1"
+```
 
 Then install:
 
@@ -35,14 +37,18 @@ Accessing the shared instance
 
 To access the shared instance of the UYLPasswordManager use the sharedInstance class method:
 
-    UYLPasswordManager *manager = [UYLPasswordManager sharedInstance];
+```objc
+UYLPasswordManager *manager = [UYLPasswordManager sharedInstance];
+```
 
 Deleting Cached Items
 ---------------------
 
 The UYLPasswordManager class caches the last access to the keychain. This is efficient when the same item is accessed multiple times by an application. You should flush these cache entries when you no longer need then. The cache is automatically cleared when the device is locked or when moving to the background.
 
-    [manager purge];
+```objc
+[manager purge];
+```
 
 Using the Keychain
 ==================
@@ -54,14 +60,18 @@ Any key that you store in the keychain is associated with an identifier. The ide
 
 For example, to store a password you might use the user name as the identifier.
 
-    [manager registerKey:password forIdentifier:username];
+```objc
+[manager registerKey:password forIdentifier:username];
+```
 
 Retrieving an Item from the Keychain
 ---------------------
 
 To retrieve a key for an identifier:
 
-    NSString *result = [manager keyForIdentifier:username];
+```objc
+NSString *result = [manager keyForIdentifier:username];
+```
 
 If there is no matching identifier in the Keychain this will return nil.
 
@@ -71,18 +81,24 @@ Searching for an Item
 
 To determine if an existing key exists in the keychain:
 
-    BOOL result = [manager validKey:password forIdentifier:username];
+```objc
+BOOL result = [manager validKey:password forIdentifier:username];
+```
 
 If you just need to check for the presence of the identifier in the keychain you can pass nil for the key:
 
-    BOOL result = [manager validKey:nil for Identifier:username];
+```objc
+BOOL result = [manager validKey:nil for Identifier:username];
+```
 
 Deleting an Item
 ----------------
 
 To remove an item from the keychain:
 
-    [manager deleteKeyForIdentifier:username];
+```objc
+[manager deleteKeyForIdentifier:username];
+```
 
 Data Protection Classes
 =======================
@@ -96,7 +112,9 @@ If a user restores an encrypted backup to a new device keychain items which are 
 
 The migrate property is a BOOL which controls whether items added or updated are migratable. By default the migrate property is set to YES. If you want to set an item to be non-migratable set the migrate property to NO before adding or updating the item.
 
-    manager.migrate = NO;
+```objc
+manager.migrate = NO;
+```
 
 Data Accessibility
 ------------------
@@ -111,7 +129,9 @@ The accessMode property controls the accessibility of the keychain item. There a
 
 The default is UYLPMAccessibleWhenUnlocked which prevents access to the item when the device is locked. Note that if you need to access the keychain when running in the background it is recommend to allow access after first unlock:
 
-    manager.accessMode = UYLPMAccessibleAfterFirstUnlock;
+```objc
+manager.accessMode = UYLPMAccessibleAfterFirstUnlock;
+```
 
 Group Access
 ============
@@ -135,9 +155,11 @@ Accessing a Keychain Group
 
 The UYLPasswordManager methods for adding, retrieving, and searching for keychain items are all available in a form that takes an additional group parameter:
 
-    [manager registerKey:password forIdentifier:username inGroup:group];
+```objc
+[manager registerKey:password forIdentifier:username inGroup:group];
 
-    BOOL result = [manager validKey:nil for Identifier:username inGroup:group];
+BOOL result = [manager validKey:nil for Identifier:username inGroup:group];
+```
 
 
 Class Documentation
@@ -148,13 +170,17 @@ Shared Instance Class Methods
 
 ### sharedInstance
 
-    + (UYLPasswordManager *)sharedInstance
+```objc
++ (UYLPasswordManager *)sharedInstance
+```
 
 Returns a reference to the UYLPasswordManager shared instance. The shared instance is allocated the first time it is accessed. All subsequent access to this method returns a reference to the existing instance.
 
 ### dropShared
 
-    + (void)dropShared
+```objc
++ (void)dropShared
+```
 
 Force the shared instance to be released. There should not normally be a reason to do this as the shared instance uses only a small amount of memory.
 
@@ -165,7 +191,9 @@ Keychain Access Methods
 
 Add an item or update an existing item to the keychain.
 
-    - (void)registerKey:(NSString *)key forIdentifier:(NSString *)identifier inGroup:(NSString *)group
+```objc
+- (void)registerKey:(NSString *)key forIdentifier:(NSString *)identifier inGroup:(NSString *)group
+```
 
 #### Parameters
 
@@ -182,7 +210,9 @@ The keychain access group. This parameter is optional and may be set to nil.
 
 Delete an item from the keychain.
 
-    - (void)deleteKeyForIdentifier:(NSString *)identifier inGroup:(NSString *)group
+```objc
+- (void)deleteKeyForIdentifier:(NSString *)identifier inGroup:(NSString *)group
+```
 
 #### Parameters
 
@@ -196,7 +226,9 @@ The keychain access group. This parameter is optional and may be set to nil.
 
 Search the keychain for the identifier and compare the value of the key. If you do not care about the value of the key you can pass it as nil.
 
-    - (BOOL)validKey:(NSString *)key forIdentifier:(NSString *)identifier inGroup:(NSString *)group
+```objc
+- (BOOL)validKey:(NSString *)key forIdentifier:(NSString *)identifier inGroup:(NSString *)group
+```
 
 #### Parameters
 
@@ -213,7 +245,9 @@ The keychain access group. This parameter is optional and may be set to nil.
 
 Search the keychain for the identifier and if present return the value of the associated key.
 
-    - (NSString *)keyForIdentifier:(NSString *)identifier inGroup:(NSString *)group
+```objc
+- (NSString *)keyForIdentifier:(NSString *)identifier inGroup:(NSString *)group
+```
 
 #### Parameters
 
@@ -227,7 +261,9 @@ The keychain access group. This parameter is optional and may be set to nil.
 
 Add an item or update an existing item to the keychain. Equivalent to calling registerKey:forIdentifier:inGroup: with group set to nil.
 
-    - (void)registerKey:(NSString *)key forIdentifier:(NSString *)identifier
+```objc
+- (void)registerKey:(NSString *)key forIdentifier:(NSString *)identifier
+```
 
 #### Parameters
 
@@ -241,7 +277,9 @@ The identifier of the keychain item to be stored.
 
 Delete an item from the keychain. Equivalent to calling deleteKeyForIdentifier:inGroup: with group set to nil.
 
-    - (void)deleteKeyForIdentifier:(NSString *)identifier
+```objc
+- (void)deleteKeyForIdentifier:(NSString *)identifier
+```
 
 #### Parameters
 
@@ -252,7 +290,9 @@ The identifier of the keychain item to be deleted.
 
 Search the keychain for the identifier and compare the value of the key. If you do not care about the value of the key you can pass it as nil. Equivalent to calling validKey:forIdentifier:inGroup: with group set to nil.
 
-    - (BOOL)validKey:(NSString *)key forIdentifier:(NSString *)identifier
+```objc
+- (BOOL)validKey:(NSString *)key forIdentifier:(NSString *)identifier
+```
 
 #### Parameters
 
@@ -266,7 +306,9 @@ The identifier of the keychain item to search for.
 
 Search the keychain for the identifier and if present return the value of the associated key. Equivalent to calling keyForIdentifier:InGroup: with group set to nil.
 
-    - (NSString *)keyForIdentifier:(NSString *)identifier
+```objc
+- (NSString *)keyForIdentifier:(NSString *)identifier
+```
 
 #### Parameters
 
@@ -278,7 +320,9 @@ Miscellaneous Methods
 
 ### purge
 
-    - (void)purge
+```objc
+- (void)purge
+```
 
 Removes any cached keychain data. Use this method to ensure that all sensitive keychain data is removed from memory. This method is automatically invoked when the device is locked or when the application enters the background.
 
@@ -287,8 +331,12 @@ Properties
 
 ### migrate
 
-    @property (nonatomic, assign) BOOL migrate
+```objc
+@property (nonatomic, assign) BOOL migrate
+```
 
 ### accessMode
 
-    @property (nonatomic, assign) UYLPMAccessMode accessMode
+```objc
+@property (nonatomic, assign) UYLPMAccessMode accessMode
+```
